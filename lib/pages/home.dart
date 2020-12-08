@@ -27,13 +27,13 @@ class _HomeState extends State<Home> {
       children: [
         Container(
           color: Colors.indigo,
-          height: 100,
+          height: 95,
           child: Padding(
             padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
             child: Row(
               children: [
                 Container(
-                    margin: EdgeInsets.only(bottom: 15, right: 10),
+                    margin: EdgeInsets.only(bottom: 10, right: 10),
                     child: GestureDetector(
                       onTap: () {
                         globalKey.currentState.openDrawer();
@@ -46,7 +46,7 @@ class _HomeState extends State<Home> {
                     )),
                 Container(
                   height: 40,
-                  width: MediaQuery.of(context).size.width / 1.2,
+                  width: MediaQuery.of(context).size.width/1.3,
                   margin: EdgeInsets.only(bottom: 15),
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -125,19 +125,38 @@ class _HomeState extends State<Home> {
     );
   }
 
+  gridViewItem() {
+    return Container(
+        height: MediaQuery.of(context).size.height / 1.2,
+        child: GridView.count(
+          padding: EdgeInsets.only(bottom: 5),
+          shrinkWrap: true,
+          crossAxisCount: 2,
+          children: List.generate(50, (index) {
+            return Container(
+              child: Card(
+                color: Colors.amber,
+              ),
+            );
+          }),
+        ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _key,
       drawer: buildDrawer(),
-      body: Column(
-        children: [
+      body: SingleChildScrollView(
+        // controller: controller,
+        child: Column(children: [
           setAppBar(_key),
           buildListKategori(),
           Divider(
             color: Colors.black,
-          )
-        ],
+          ),
+          gridViewItem()
+        ]),
       ),
     );
   }

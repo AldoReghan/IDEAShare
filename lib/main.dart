@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ideashare/pages/home.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   runApp(MyApp());
 }
 
@@ -11,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'IDEAShare',
       home: Home(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
