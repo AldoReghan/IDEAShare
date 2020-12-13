@@ -19,7 +19,32 @@ class _HomeState extends State<Home> {
   GlobalKey<ScaffoldState> _key = GlobalKey();
 
   buildDrawer() {
-    return Drawer();
+    return Drawer(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: [
+          Container(
+            height: 215,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+              color: Colors.indigo,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(
+                  maxRadius: 40,
+                  backgroundImage: NetworkImage("https://lh3.googleusercontent.com/ogw/ADGmqu_lFB61JWUrBHjn-piv1VDROO3cbQsBYuv_PVZ_IQ=s83-c-mo")
+                ),
+                SizedBox(height: 5,),
+                Text("Aldo Reghan Ramadhan", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),),
+                Text("Programmer", style: TextStyle(color: Colors.white),)
+              ],
+            ),
+          )
+        ],
+      )
+    );
   }
 
   Widget setAppBar(GlobalKey<ScaffoldState> globalKey) {
@@ -46,7 +71,7 @@ class _HomeState extends State<Home> {
                     )),
                 Container(
                   height: 40,
-                  width: MediaQuery.of(context).size.width/1.3,
+                  width: MediaQuery.of(context).size.width / 1.3,
                   margin: EdgeInsets.only(bottom: 15),
                   decoration: BoxDecoration(
                       color: Colors.white,
