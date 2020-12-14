@@ -38,10 +38,26 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(height: 5,),
                 Text("Aldo Reghan Ramadhan", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),),
-                Text("Programmer", style: TextStyle(color: Colors.white),)
+                Text("aldoreghan@gmail.com", style: TextStyle(color: Colors.white),)
               ],
             ),
-          )
+          ),
+          ListTile(
+            title: Text("Buat Ide", style: TextStyle(color: Colors.indigo),),
+            leading: Icon(Icons.lightbulb, color: Colors.indigo),
+          ),
+          ListTile(
+            title: Text("Lihat Ide", style: TextStyle(color: Colors.indigo),),
+            leading: Icon(Icons.list, color: Colors.indigo),
+          ),
+          ListTile(
+            title: Text("Buat Ide", style: TextStyle(color: Colors.indigo),),
+            leading: Icon(Icons.lightbulb, color: Colors.indigo),
+          ),
+          ListTile(
+            title: Text("Profil", style: TextStyle(color: Colors.indigo),),
+            leading: Icon(Icons.account_circle, color: Colors.indigo),
+          ),
         ],
       )
     );
@@ -152,7 +168,7 @@ class _HomeState extends State<Home> {
 
   gridViewItem() {
     return Container(
-        height: MediaQuery.of(context).size.height / 1.2,
+        height: MediaQuery.of(context).size.height / 1.4,
         child: GridView.count(
           padding: EdgeInsets.only(bottom: 5),
           shrinkWrap: true,
@@ -180,8 +196,22 @@ class _HomeState extends State<Home> {
           Divider(
             color: Colors.black,
           ),
-          gridViewItem()
+          gridViewItem(),
         ]),
+      ),
+      bottomNavigationBar: Container(
+        child: BottomNavigationBar(
+          fixedColor: Colors.indigo,
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home'
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle),
+              label: 'Profil'
+            ),
+          ]),
       ),
     );
   }
