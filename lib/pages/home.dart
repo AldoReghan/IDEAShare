@@ -20,47 +20,69 @@ class _HomeState extends State<Home> {
 
   buildDrawer() {
     return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          Container(
-            height: 215,
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              color: Colors.indigo,
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
+        child: ListView(
+      padding: EdgeInsets.zero,
+      children: [
+        Container(
+          height: 215,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            color: Colors.indigo,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              CircleAvatar(
                   maxRadius: 40,
-                  backgroundImage: NetworkImage("https://lh3.googleusercontent.com/ogw/ADGmqu_lFB61JWUrBHjn-piv1VDROO3cbQsBYuv_PVZ_IQ=s83-c-mo")
-                ),
-                SizedBox(height: 5,),
-                Text("Aldo Reghan Ramadhan", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),),
-                Text("aldoreghan@gmail.com", style: TextStyle(color: Colors.white),)
-              ],
-            ),
+                  backgroundImage: NetworkImage(
+                      "https://lh3.googleusercontent.com/ogw/ADGmqu_lFB61JWUrBHjn-piv1VDROO3cbQsBYuv_PVZ_IQ=s83-c-mo")),
+              SizedBox(
+                height: 5,
+              ),
+              Text(
+                "Aldo Reghan Ramadhan",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16),
+              ),
+              Text(
+                "aldoreghan@gmail.com",
+                style: TextStyle(color: Colors.white),
+              )
+            ],
           ),
-          ListTile(
-            title: Text("Buat Ide", style: TextStyle(color: Colors.indigo),),
-            leading: Icon(Icons.lightbulb, color: Colors.indigo),
+        ),
+        ListTile(
+          title: Text(
+            "Buat Ide",
+            style: TextStyle(color: Colors.indigo),
           ),
-          ListTile(
-            title: Text("Lihat Ide", style: TextStyle(color: Colors.indigo),),
-            leading: Icon(Icons.list, color: Colors.indigo),
+          leading: Icon(Icons.lightbulb, color: Colors.indigo),
+        ),
+        ListTile(
+          title: Text(
+            "Lihat Ide",
+            style: TextStyle(color: Colors.indigo),
           ),
-          ListTile(
-            title: Text("Buat Ide", style: TextStyle(color: Colors.indigo),),
-            leading: Icon(Icons.lightbulb, color: Colors.indigo),
+          leading: Icon(Icons.list, color: Colors.indigo),
+        ),
+        ListTile(
+          title: Text(
+            "Buat Ide",
+            style: TextStyle(color: Colors.indigo),
           ),
-          ListTile(
-            title: Text("Profil", style: TextStyle(color: Colors.indigo),),
-            leading: Icon(Icons.account_circle, color: Colors.indigo),
+          leading: Icon(Icons.lightbulb, color: Colors.indigo),
+        ),
+        ListTile(
+          title: Text(
+            "Profil",
+            style: TextStyle(color: Colors.indigo),
           ),
-        ],
-      )
-    );
+          leading: Icon(Icons.account_circle, color: Colors.indigo),
+        ),
+      ],
+    ));
   }
 
   Widget setAppBar(GlobalKey<ScaffoldState> globalKey) {
@@ -166,20 +188,59 @@ class _HomeState extends State<Home> {
     );
   }
 
-  gridViewItem() {
+  gridViewItem(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
+    final double itemWidth = size.width / 2;
     return Container(
+        // color: Colors.blue,
         height: MediaQuery.of(context).size.height / 1.4,
         child: GridView.count(
-          padding: EdgeInsets.only(bottom: 5),
-          shrinkWrap: true,
+          childAspectRatio: (itemWidth / itemHeight),
+          padding: EdgeInsets.only(bottom: 5, left: 5, right: 5),
           crossAxisCount: 2,
-          children: List.generate(50, (index) {
-            return Container(
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
+          children: [
+            Container(
               child: Card(
-                color: Colors.amber,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(5),
+                            topRight: Radius.circular(5)),
+                        color: Colors.blue,
+                      ),
+                      height: 150,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:
+                          Text("Make AI For Mobile Phone")
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text("Idea by Aldo RR"),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 15),
+                      decoration: BoxDecoration(
+                        color: Colors.indigo,
+                        borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(5),
+                            bottomRight: Radius.circular(5)),
+                      ),
+                      height: 50,
+                      child: Center(child: Text("Discuss"),),
+                    )
+                  ],
+                ),
               ),
-            );
-          }),
+            ),
+          ],
         ));
   }
 
@@ -189,29 +250,23 @@ class _HomeState extends State<Home> {
       key: _key,
       drawer: buildDrawer(),
       body: SingleChildScrollView(
-        // controller: controller,
         child: Column(children: [
           setAppBar(_key),
           buildListKategori(),
           Divider(
             color: Colors.black,
           ),
-          gridViewItem(),
+          gridViewItem(context),
         ]),
       ),
       bottomNavigationBar: Container(
         child: BottomNavigationBar(
-          fixedColor: Colors.indigo,
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home'
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
-              label: 'Profil'
-            ),
-          ]),
+            fixedColor: Colors.indigo,
+            items: <BottomNavigationBarItem>[
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.account_circle), label: 'Profil'),
+            ]),
       ),
     );
   }
