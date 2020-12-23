@@ -69,10 +69,17 @@ class _HomeState extends State<Home> {
         ),
         ListTile(
           title: Text(
-            "Buat Ide",
+            "Favorit",
             style: TextStyle(color: Colors.indigo),
           ),
-          leading: Icon(Icons.lightbulb, color: Colors.indigo),
+          leading: Icon(Icons.favorite, color: Colors.indigo),
+        ),
+        ListTile(
+          title: Text(
+            "Terealisasi",
+            style: TextStyle(color: Colors.indigo),
+          ),
+          leading: Icon(Icons.send, color: Colors.indigo),
         ),
         ListTile(
           title: Text(
