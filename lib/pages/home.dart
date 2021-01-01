@@ -196,59 +196,204 @@ class _HomeState extends State<Home> {
   }
 
   gridViewItem(BuildContext context) {
-    var size = MediaQuery.of(context).size;
-    final double itemHeight = (size.height - kToolbarHeight - 24) / 2;
-    final double itemWidth = size.width / 2;
     return Container(
-        // color: Colors.blue,
-        height: MediaQuery.of(context).size.height / 1.4,
-        child: GridView.count(
-          childAspectRatio: (itemWidth / itemHeight),
-          padding: EdgeInsets.only(bottom: 5, left: 5, right: 5),
-          crossAxisCount: 2,
-          mainAxisSpacing: 10,
-          crossAxisSpacing: 10,
-          children: [
-            Container(
-              child: Card(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(5),
-                            topRight: Radius.circular(5)),
-                        color: Colors.blue,
+      height: MediaQuery.of(context).size.height/1.1,
+      child: ListView(
+        padding: EdgeInsets.only(bottom: 8),
+        children: [
+          Container(
+            height: 150,
+            child: Card(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 150,
+                    width: 110,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(5),
+                        bottomLeft: Radius.circular(5)
                       ),
-                      height: 150,
+                      boxShadow: [BoxShadow(
+                        blurRadius: 2,
+                        offset: Offset(1,3),
+                      )],
+                      color: Colors.indigo,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child:
-                          Text("Make AI For Mobile Phone")
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 8, top: 8),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.category),
+                            Text("Mobile Apps with AI")
+                          ],
+                        )
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text("Idea by Aldo RR"),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 15),
-                      decoration: BoxDecoration(
-                        color: Colors.indigo,
-                        borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(5),
-                            bottomRight: Radius.circular(5)),
-                      ),
-                      height: 50,
-                      child: Center(child: Text("Discuss"),),
-                    )
-                  ],
-                ),
+                  )
+                ],
               ),
             ),
-          ],
-        ));
+          ),
+          Container(
+            height: 150,
+            child: Card(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 150,
+                    width: 110,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(5),
+                        bottomLeft: Radius.circular(5)
+                      ),
+                      boxShadow: [BoxShadow(
+                        blurRadius: 2,
+                        offset: Offset(1,3),
+                      )],
+                      color: Colors.indigo,
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 8, top: 8),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.category),
+                            Text("Mobile Apps with AI")
+                          ],
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Container(
+            height: 150,
+            child: Card(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 150,
+                    width: 110,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(5),
+                        bottomLeft: Radius.circular(5)
+                      ),
+                      boxShadow: [BoxShadow(
+                        blurRadius: 2,
+                        offset: Offset(1,3),
+                      )],
+                      color: Colors.indigo,
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 8, top: 8),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.category),
+                            Text("Mobile Apps with AI")
+                          ],
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Container(
+            height: 150,
+            child: Card(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 150,
+                    width: 110,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(5),
+                        bottomLeft: Radius.circular(5)
+                      ),
+                      boxShadow: [BoxShadow(
+                        blurRadius: 2,
+                        offset: Offset(1,3),
+                      )],
+                      color: Colors.indigo,
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 8, top: 8),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.category),
+                            Text("Mobile Apps with AI")
+                          ],
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          Container(
+            height: 150,
+            child: Card(
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 150,
+                    width: 110,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(5),
+                        bottomLeft: Radius.circular(5)
+                      ),
+                      boxShadow: [BoxShadow(
+                        blurRadius: 2,
+                        offset: Offset(1,3),
+                      )],
+                      color: Colors.indigo,
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.only(left: 8, top: 8),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Icon(Icons.category),
+                            Text("Mobile Apps with AI")
+                          ],
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          )
+        ],
+      )
+    );
   }
 
   @override
