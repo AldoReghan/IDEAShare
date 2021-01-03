@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -195,205 +196,206 @@ class _HomeState extends State<Home> {
     );
   }
 
-  gridViewItem(BuildContext context) {
+  gridViewItem(BuildContext context) {  
     return Container(
-      height: MediaQuery.of(context).size.height/1.1,
-      child: ListView(
-        padding: EdgeInsets.only(bottom: 8),
-        children: [
-          Container(
-            height: 150,
-            child: Card(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: 150,
-                    width: 110,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5),
-                        bottomLeft: Radius.circular(5)
+        // color: Colors.red,
+        height: ScreenUtil.defaultSize.height/1.17,
+        child: ListView(
+          padding: EdgeInsets.only(bottom: 4),
+          children: [
+            Container(
+              height: 150,
+              child: Card(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 150,
+                      width: 110,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(5),
+                          bottomLeft: Radius.circular(5)
+                        ),
+                        boxShadow: [BoxShadow(
+                          blurRadius: 2,
+                          offset: Offset(1,3),
+                        )],
+                        color: Colors.indigo,
                       ),
-                      boxShadow: [BoxShadow(
-                        blurRadius: 2,
-                        offset: Offset(1,3),
-                      )],
-                      color: Colors.indigo,
                     ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(left: 8, top: 8),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Icon(Icons.category),
-                            Text("Mobile Apps with AI")
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-                ],
+                    Container(
+                      padding: EdgeInsets.only(left: 8, top: 8),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.category),
+                              Text("Mobile Apps with AI")
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-          Container(
-            height: 150,
-            child: Card(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: 150,
-                    width: 110,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5),
-                        bottomLeft: Radius.circular(5)
+            Container(
+              height: 150,
+              child: Card(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 150,
+                      width: 110,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(5),
+                          bottomLeft: Radius.circular(5)
+                        ),
+                        boxShadow: [BoxShadow(
+                          blurRadius: 2,
+                          offset: Offset(1,3),
+                        )],
+                        color: Colors.indigo,
                       ),
-                      boxShadow: [BoxShadow(
-                        blurRadius: 2,
-                        offset: Offset(1,3),
-                      )],
-                      color: Colors.indigo,
                     ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(left: 8, top: 8),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Icon(Icons.category),
-                            Text("Mobile Apps with AI")
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-                ],
+                    Container(
+                      padding: EdgeInsets.only(left: 8, top: 8),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.category),
+                              Text("Mobile Apps with AI")
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-          Container(
-            height: 150,
-            child: Card(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: 150,
-                    width: 110,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5),
-                        bottomLeft: Radius.circular(5)
+            Container(
+              height: 150,
+              child: Card(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 150,
+                      width: 110,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(5),
+                          bottomLeft: Radius.circular(5)
+                        ),
+                        boxShadow: [BoxShadow(
+                          blurRadius: 2,
+                          offset: Offset(1,3),
+                        )],
+                        color: Colors.indigo,
                       ),
-                      boxShadow: [BoxShadow(
-                        blurRadius: 2,
-                        offset: Offset(1,3),
-                      )],
-                      color: Colors.indigo,
                     ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(left: 8, top: 8),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Icon(Icons.category),
-                            Text("Mobile Apps with AI")
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-                ],
+                    Container(
+                      padding: EdgeInsets.only(left: 8, top: 8),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.category),
+                              Text("Mobile Apps with AI")
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-          Container(
-            height: 150,
-            child: Card(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: 150,
-                    width: 110,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5),
-                        bottomLeft: Radius.circular(5)
+            Container(
+              height: 150,
+              child: Card(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 150,
+                      width: 110,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(5),
+                          bottomLeft: Radius.circular(5)
+                        ),
+                        boxShadow: [BoxShadow(
+                          blurRadius: 2,
+                          offset: Offset(1,3),
+                        )],
+                        color: Colors.indigo,
                       ),
-                      boxShadow: [BoxShadow(
-                        blurRadius: 2,
-                        offset: Offset(1,3),
-                      )],
-                      color: Colors.indigo,
                     ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(left: 8, top: 8),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Icon(Icons.category),
-                            Text("Mobile Apps with AI")
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-                ],
+                    Container(
+                      padding: EdgeInsets.only(left: 8, top: 8),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.category),
+                              Text("Mobile Apps with AI")
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-          Container(
-            height: 150,
-            child: Card(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    height: 150,
-                    width: 110,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(5),
-                        bottomLeft: Radius.circular(5)
+            Container(
+              height: 150,
+              child: Card(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 150,
+                      width: 110,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(5),
+                          bottomLeft: Radius.circular(5)
+                        ),
+                        boxShadow: [BoxShadow(
+                          blurRadius: 2,
+                          offset: Offset(1,3),
+                        )],
+                        color: Colors.indigo,
                       ),
-                      boxShadow: [BoxShadow(
-                        blurRadius: 2,
-                        offset: Offset(1,3),
-                      )],
-                      color: Colors.indigo,
                     ),
-                  ),
-                  Container(
-                    padding: EdgeInsets.only(left: 8, top: 8),
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Icon(Icons.category),
-                            Text("Mobile Apps with AI")
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-                ],
+                    Container(
+                      padding: EdgeInsets.only(left: 8, top: 8),
+                      child: Column(
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.category),
+                              Text("Mobile Apps with AI")
+                            ],
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-          )
-        ],
-      )
-    );
+            )
+          ],
+        )
+      );
   }
 
   @override
@@ -403,23 +405,23 @@ class _HomeState extends State<Home> {
       drawer: buildDrawer(),
       body: SingleChildScrollView(
         child: Column(children: [
-          setAppBar(_key),
-          buildListKategori(),
-          Divider(
-            color: Colors.black,
-          ),
-          gridViewItem(context),
-        ]),
+            setAppBar(_key),
+            buildListKategori(),
+            Divider(
+              color: Colors.black,
+            ),
+            gridViewItem(context),
+          ]),
       ),
-      bottomNavigationBar: Container(
-        child: BottomNavigationBar(
-            fixedColor: Colors.indigo,
-            items: <BottomNavigationBarItem>[
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.account_circle), label: 'Profil'),
-            ]),
-      ),
+      // bottomNavigationBar: Container(
+      //   child: BottomNavigationBar(
+      //       fixedColor: Colors.indigo,
+      //       items: <BottomNavigationBarItem>[
+      //         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+      //         BottomNavigationBarItem(
+      //             icon: Icon(Icons.account_circle), label: 'Profil'),
+      //       ]),
+      // ),
     );
   }
 }
