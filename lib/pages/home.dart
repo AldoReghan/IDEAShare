@@ -196,23 +196,25 @@ class _HomeState extends State<Home> {
     );
   }
 
-  gridViewItem(BuildContext context) {  
+  gridViewItem(BuildContext context) {
     return Container(
         // color: Colors.red,
-        height: ScreenUtil.defaultSize.height/1.17,
+        height: ScreenUtil.defaultSize.height/1.13,
         child: ListView(
           padding: EdgeInsets.only(bottom: 4),
           children: [
             Container(
               height: 150,
               child: Card(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
+                elevation: 4,
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
                       height: 150,
                       width: 110,
                       decoration: BoxDecoration(
+                        color: Colors.indigo,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(5),
                           bottomLeft: Radius.circular(5)
@@ -221,36 +223,81 @@ class _HomeState extends State<Home> {
                           blurRadius: 2,
                           offset: Offset(1,3),
                         )],
-                        color: Colors.indigo,
                       ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(left: 8, top: 8),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Icon(Icons.category),
-                              Text("Mobile Apps with AI")
-                            ],
-                          )
-                        ],
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            MergeSemantics(
+                              child: Row(
+                                children: <Widget>[
+                                  Flexible(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Mobile POST apps with AI and voice recoginition',
+                                        overflow: TextOverflow.clip,
+                                        softWrap: true,
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w600,
+                                            color:
+                                                Theme.of(context).primaryColor),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Teknologi',
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 15),
+                            Container(
+                              height: 40,
+                              width: MediaQuery.of(context).size.width/1.5,
+                              child: Card(
+                                color: Colors.indigo,
+                                child: Center(child: Text("Discuss", style: 
+                                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
             Container(
               height: 150,
               child: Card(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
+                elevation: 4,
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
                       height: 150,
                       width: 110,
                       decoration: BoxDecoration(
+                        color: Colors.indigo,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(5),
                           bottomLeft: Radius.circular(5)
@@ -259,36 +306,81 @@ class _HomeState extends State<Home> {
                           blurRadius: 2,
                           offset: Offset(1,3),
                         )],
-                        color: Colors.indigo,
                       ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(left: 8, top: 8),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Icon(Icons.category),
-                              Text("Mobile Apps with AI")
-                            ],
-                          )
-                        ],
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            MergeSemantics(
+                              child: Row(
+                                children: <Widget>[
+                                  Flexible(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Mobile POST apps with AI and voice recoginition',
+                                        overflow: TextOverflow.clip,
+                                        softWrap: true,
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w600,
+                                            color:
+                                                Theme.of(context).primaryColor),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Teknologi',
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 15),
+                            Container(
+                              height: 40,
+                              width: MediaQuery.of(context).size.width/1.5,
+                              child: Card(
+                                color: Colors.indigo,
+                                child: Center(child: Text("Discuss", style: 
+                                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
             Container(
               height: 150,
               child: Card(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
+                elevation: 4,
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
                       height: 150,
                       width: 110,
                       decoration: BoxDecoration(
+                        color: Colors.indigo,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(5),
                           bottomLeft: Radius.circular(5)
@@ -297,36 +389,81 @@ class _HomeState extends State<Home> {
                           blurRadius: 2,
                           offset: Offset(1,3),
                         )],
-                        color: Colors.indigo,
                       ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(left: 8, top: 8),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Icon(Icons.category),
-                              Text("Mobile Apps with AI")
-                            ],
-                          )
-                        ],
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            MergeSemantics(
+                              child: Row(
+                                children: <Widget>[
+                                  Flexible(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Mobile POST apps with AI and voice recoginition',
+                                        overflow: TextOverflow.clip,
+                                        softWrap: true,
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w600,
+                                            color:
+                                                Theme.of(context).primaryColor),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Teknologi',
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 15),
+                            Container(
+                              height: 40,
+                              width: MediaQuery.of(context).size.width/1.5,
+                              child: Card(
+                                color: Colors.indigo,
+                                child: Center(child: Text("Discuss", style: 
+                                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
             Container(
               height: 150,
               child: Card(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
+                elevation: 4,
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
                       height: 150,
                       width: 110,
                       decoration: BoxDecoration(
+                        color: Colors.indigo,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(5),
                           bottomLeft: Radius.circular(5)
@@ -335,36 +472,81 @@ class _HomeState extends State<Home> {
                           blurRadius: 2,
                           offset: Offset(1,3),
                         )],
-                        color: Colors.indigo,
                       ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(left: 8, top: 8),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Icon(Icons.category),
-                              Text("Mobile Apps with AI")
-                            ],
-                          )
-                        ],
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            MergeSemantics(
+                              child: Row(
+                                children: <Widget>[
+                                  Flexible(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Mobile POST apps with AI and voice recoginition',
+                                        overflow: TextOverflow.clip,
+                                        softWrap: true,
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w600,
+                                            color:
+                                                Theme.of(context).primaryColor),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Teknologi',
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 15),
+                            Container(
+                              height: 40,
+                              width: MediaQuery.of(context).size.width/1.5,
+                              child: Card(
+                                color: Colors.indigo,
+                                child: Center(child: Text("Discuss", style: 
+                                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
             Container(
               height: 150,
               child: Card(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
+                elevation: 4,
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
                       height: 150,
                       width: 110,
                       decoration: BoxDecoration(
+                        color: Colors.indigo,
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(5),
                           bottomLeft: Radius.circular(5)
@@ -373,28 +555,71 @@ class _HomeState extends State<Home> {
                           blurRadius: 2,
                           offset: Offset(1,3),
                         )],
-                        color: Colors.indigo,
                       ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(left: 8, top: 8),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Icon(Icons.category),
-                              Text("Mobile Apps with AI")
-                            ],
-                          )
-                        ],
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        width: 5.0,
+                      ),
+                      Flexible(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            MergeSemantics(
+                              child: Row(
+                                children: <Widget>[
+                                  Flexible(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Mobile POST apps with AI and voice recoginition',
+                                        overflow: TextOverflow.clip,
+                                        softWrap: true,
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w600,
+                                            color:
+                                                Theme.of(context).primaryColor),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
+                            SizedBox(height: 5),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    'Teknologi',
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w700,
+                                        color: Colors.black),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(height: 15),
+                            Container(
+                              height: 40,
+                              width: MediaQuery.of(context).size.width/1.5,
+                              child: Card(
+                                color: Colors.indigo,
+                                child: Center(child: Text("Discuss", style: 
+                                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
-            )
+            ),
           ],
-        )
+        ),
       );
   }
 
@@ -405,13 +630,13 @@ class _HomeState extends State<Home> {
       drawer: buildDrawer(),
       body: SingleChildScrollView(
         child: Column(children: [
-            setAppBar(_key),
-            buildListKategori(),
-            Divider(
-              color: Colors.black,
-            ),
-            gridViewItem(context),
-          ]),
+          setAppBar(_key),
+          buildListKategori(),
+          Divider(
+            color: Colors.black,
+          ),
+          gridViewItem(context),
+        ]),
       ),
       // bottomNavigationBar: Container(
       //   child: BottomNavigationBar(
