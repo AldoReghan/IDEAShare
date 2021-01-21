@@ -197,9 +197,11 @@ class _HomeState extends State<Home> {
   }
 
   gridViewItem(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+
     return Container(
         // color: Colors.red,
-        height: ScreenUtil.defaultSize.height/1.13,
+        height: height - kToolbarHeight*2.9,
         child: ListView(
           padding: EdgeInsets.only(bottom: 4),
           children: [
@@ -638,15 +640,6 @@ class _HomeState extends State<Home> {
           gridViewItem(context),
         ]),
       ),
-      // bottomNavigationBar: Container(
-      //   child: BottomNavigationBar(
-      //       fixedColor: Colors.indigo,
-      //       items: <BottomNavigationBarItem>[
-      //         BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-      //         BottomNavigationBarItem(
-      //             icon: Icon(Icons.account_circle), label: 'Profil'),
-      //       ]),
-      // ),
     );
   }
 }
