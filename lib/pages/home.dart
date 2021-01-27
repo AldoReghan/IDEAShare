@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ideashare/component/drawer.dart';
+import 'package:ideashare/pages/detail_idea.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -18,80 +19,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   GlobalKey<ScaffoldState> _key = GlobalKey();
-
-  buildDrawer() {
-    return Drawer(
-        child: ListView(
-      padding: EdgeInsets.zero,
-      children: [
-        Container(
-          height: 215,
-          width: MediaQuery.of(context).size.width,
-          decoration: BoxDecoration(
-            color: Colors.indigo,
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              CircleAvatar(
-                  maxRadius: 40,
-                  backgroundImage: NetworkImage(
-                      "https://lh3.googleusercontent.com/ogw/ADGmqu_lFB61JWUrBHjn-piv1VDROO3cbQsBYuv_PVZ_IQ=s83-c-mo")),
-              SizedBox(
-                height: 5,
-              ),
-              Text(
-                "Aldo Reghan Ramadhan",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16),
-              ),
-              Text(
-                "aldoreghan@gmail.com",
-                style: TextStyle(color: Colors.white),
-              )
-            ],
-          ),
-        ),
-        ListTile(
-          title: Text(
-            "Buat Ide",
-            style: TextStyle(color: Colors.indigo),
-          ),
-          leading: Icon(Icons.lightbulb, color: Colors.indigo),
-        ),
-        ListTile(
-          title: Text(
-            "Lihat Ide",
-            style: TextStyle(color: Colors.indigo),
-          ),
-          leading: Icon(Icons.list, color: Colors.indigo),
-        ),
-        ListTile(
-          title: Text(
-            "Favorit",
-            style: TextStyle(color: Colors.indigo),
-          ),
-          leading: Icon(Icons.favorite, color: Colors.indigo),
-        ),
-        ListTile(
-          title: Text(
-            "Terealisasi",
-            style: TextStyle(color: Colors.indigo),
-          ),
-          leading: Icon(Icons.send, color: Colors.indigo),
-        ),
-        ListTile(
-          title: Text(
-            "Profil",
-            style: TextStyle(color: Colors.indigo),
-          ),
-          leading: Icon(Icons.account_circle, color: Colors.indigo),
-        ),
-      ],
-    ));
-  }
 
   Widget setAppBar(GlobalKey<ScaffoldState> globalKey) {
     return Stack(
@@ -200,7 +127,6 @@ class _HomeState extends State<Home> {
     double height = MediaQuery.of(context).size.height;
 
     return Container(
-        // color: Colors.red,
         height: height - kToolbarHeight*2.9,
         child: ListView(
           padding: EdgeInsets.only(bottom: 4),
@@ -271,13 +197,18 @@ class _HomeState extends State<Home> {
                               ],
                             ),
                             SizedBox(height: 15),
-                            Container(
-                              height: 40,
-                              width: MediaQuery.of(context).size.width/1.5,
-                              child: Card(
-                                color: Colors.indigo,
-                                child: Center(child: Text("Discuss", style: 
-                                TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),),
+                            GestureDetector(
+                              onTap: ()=>{
+                                Navigator.push(context,MaterialPageRoute(builder: (context)=>DetailIdeaPage()))
+                              },
+                              child: Container(
+                                height: 40,
+                                width: MediaQuery.of(context).size.width/1.5,
+                                child: Card(
+                                  color: Colors.indigo,
+                                  child: Center(child: Text("Discuss", style: 
+                                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),),
+                                ),
                               ),
                             )
                           ],
@@ -629,7 +560,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _key,
-      drawer: buildDrawer(),
+      drawer: buildDrawer(context),
       body: SingleChildScrollView(
         child: Column(children: [
           setAppBar(_key),
