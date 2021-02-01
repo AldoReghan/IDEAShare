@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ideashare/component/appBar.dart';
-import 'package:ideashare/component/barKategori.dart';
+import 'package:ideashare/component/topBarKategori.dart';
 import 'package:ideashare/component/drawer.dart';
 import 'package:ideashare/component/cardItem.dart';
 
