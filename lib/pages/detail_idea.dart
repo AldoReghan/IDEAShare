@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ideashare/component/basicAppBar.dart';
 
 class DetailIdea extends StatelessWidget {
   @override
@@ -15,47 +16,6 @@ class DetailIdeaPage extends StatefulWidget {
 class _DetailIdeaPageState extends State<DetailIdeaPage> {
   GlobalKey<ScaffoldState> _key = GlobalKey();
 
-  String detail = 'Detail idea';
-
-  Widget setAppBar(GlobalKey<ScaffoldState> globalKey) {
-    return Stack(
-      children: [
-        Container(
-          color: Colors.indigo,
-          height: 95,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 40, left: 10, right: 10),
-            child: Row(
-              children: [
-                Container(
-                    margin: EdgeInsets.only(bottom: 10, right: 10),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: Icon(
-                        Icons.arrow_back,
-                        size: 30,
-                        color: Colors.white,
-                      ),
-                    )),
-                Container(
-                    margin: EdgeInsets.only(bottom: 10, right: 10),
-                    child: Text(
-                      detail,
-                      style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ))
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-
   buttonBottom() {
     return Padding(
       padding: const EdgeInsets.all(8.0),
@@ -65,15 +25,25 @@ class _DetailIdeaPageState extends State<DetailIdeaPage> {
             color: Colors.indigo, borderRadius: BorderRadius.circular(10)),
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.only(top: 15),
-              child: Text(
-                'Discuss',
-                style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white),
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 15.0),
+                  child: Icon(Icons.chat, color: Colors.white),
+                ),
+                SizedBox(width: 5),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10.0),
+                  child: Text(
+                    'Discuss',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -88,7 +58,7 @@ class _DetailIdeaPageState extends State<DetailIdeaPage> {
         key: _key,
         body: SingleChildScrollView(
           child: Column(children: [
-            setAppBar(_key),
+            basicAppBar(context,_key,'Detail Page'),
             Container(
               height: height / 4,
               color: Colors.red,
@@ -108,8 +78,11 @@ class _DetailIdeaPageState extends State<DetailIdeaPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Data of Aldo Reghan',style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold),),
+                        Text(
+                          'Data of Aldo Reghan',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
                         SizedBox(
                           height: 5,
                         ),
