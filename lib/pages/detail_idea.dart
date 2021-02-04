@@ -15,6 +15,8 @@ class DetailIdeaPage extends StatefulWidget {
 class _DetailIdeaPageState extends State<DetailIdeaPage> {
   GlobalKey<ScaffoldState> _key = GlobalKey();
 
+  String detail = 'Detail idea';
+
   Widget setAppBar(GlobalKey<ScaffoldState> globalKey) {
     return Stack(
       children: [
@@ -37,6 +39,15 @@ class _DetailIdeaPageState extends State<DetailIdeaPage> {
                         color: Colors.white,
                       ),
                     )),
+                Container(
+                    margin: EdgeInsets.only(bottom: 10, right: 10),
+                    child: Text(
+                      detail,
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ))
               ],
             ),
           ),
@@ -45,15 +56,46 @@ class _DetailIdeaPageState extends State<DetailIdeaPage> {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      key: _key,
-      body: SingleChildScrollView(
-        child: Column(children: [
-          setAppBar(_key),
-        ]),
+  buttonBottom() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: 50,
+        decoration: BoxDecoration(
+            color: Colors.indigo, borderRadius: BorderRadius.circular(10)),
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(top: 15),
+              child: Text(
+                'Discuss',
+                style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+            ),
+          ],
+        ),
       ),
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    return Scaffold(
+        key: _key,
+        body: SingleChildScrollView(
+          child: Column(children: [
+            setAppBar(_key),
+            Container(
+              height: height/4,
+              color: Colors.red,
+            ),
+            SizedBox(height: 5,)
+          ]),
+        ),
+        bottomNavigationBar: buttonBottom());
   }
 }

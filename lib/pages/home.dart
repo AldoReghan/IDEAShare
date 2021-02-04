@@ -29,7 +29,12 @@ class _HomeState extends State<Home> {
       child: ListView(
         padding: EdgeInsets.only(bottom: 4),
         children: [
-          cardItem(context,1,'Mobile POST apps with AI and voice recoginition','Teknologi','c')
+          cardItem(
+              context,
+              1,
+              'Mobile POST apps with AI and voice recoginition',
+              'Teknologi',
+              'c')
         ],
       ),
     );
@@ -42,7 +47,7 @@ class _HomeState extends State<Home> {
       drawer: buildDrawer(context),
       body: SingleChildScrollView(
         child: Column(children: [
-          appBar(context,_key),
+          appBar(context, _key),
           barKategori(),
           Divider(
             color: Colors.black,
