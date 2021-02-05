@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ideashare/pages/detail_idea.dart';
+import 'package:ideashare/pages/favorit_idea.dart';
 import 'package:ideashare/pages/home.dart';
 import 'package:flutter/services.dart';
+import 'package:ideashare/pages/lihat_idea.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -17,7 +19,9 @@ class MyApp extends StatelessWidget {
       home: Home(),
       initialRoute: '/',
       routes: {
-        '/detailIdea':(context)=>DetailIdeaPage()
+        '/detailIdea':(context)=>DetailIdeaPage(),
+        '/favoritIdea':(context)=>FavoritIdeaPage(),
+        '/lihatIdea':(context)=>LihatIdea()
       },
       debugShowCheckedModeBanner: false,
     );

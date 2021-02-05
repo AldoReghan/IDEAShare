@@ -42,26 +42,29 @@ buildDrawer(BuildContext context) {
         ),
         leading: Icon(Icons.lightbulb, color: Colors.indigo),
       ),
-      ListTile(
-        title: Text(
-          "Lihat Ide",
-          style: TextStyle(color: Colors.indigo),
+      GestureDetector(
+        onTap: () => {
+          Navigator.pushNamed(context,'/lihatIdea')
+        },
+        child: ListTile(
+          title: Text(
+            "Lihat Ide",
+            style: TextStyle(color: Colors.indigo),
+          ),
+          leading: Icon(Icons.list, color: Colors.indigo),
         ),
-        leading: Icon(Icons.list, color: Colors.indigo),
       ),
-      ListTile(
-        title: Text(
-          "Favorit",
-          style: TextStyle(color: Colors.indigo),
+      GestureDetector(
+        onTap: () => {
+          Navigator.pushNamed(context,'/favoritIdea')
+        },
+        child: ListTile(
+          title: Text(
+            "Favorit",
+            style: TextStyle(color: Colors.indigo),
+          ),
+          leading: Icon(Icons.favorite, color: Colors.indigo),
         ),
-        leading: Icon(Icons.favorite, color: Colors.indigo),
-      ),
-      ListTile(
-        title: Text(
-          "Terealisasi",
-          style: TextStyle(color: Colors.indigo),
-        ),
-        leading: Icon(Icons.send, color: Colors.indigo),
       ),
       ListTile(
         title: Text(
@@ -69,6 +72,17 @@ buildDrawer(BuildContext context) {
           style: TextStyle(color: Colors.indigo),
         ),
         leading: Icon(Icons.account_circle, color: Colors.indigo),
+      ),
+      Padding(
+        padding: const EdgeInsets.only(left:8.0, right: 8.0),
+        child: Divider(color: Colors.indigo,),
+      ),
+      ListTile(
+        title: Text(
+          "Logout",
+          style: TextStyle(color: Colors.indigo),
+        ),
+        leading: Icon(Icons.logout, color: Colors.indigo),
       ),
     ],
   ));

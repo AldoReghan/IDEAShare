@@ -34,7 +34,7 @@ Widget basicAppBar(BuildContext context, GlobalKey<ScaffoldState> globalKey, Str
                 Spacer(),
                 Container(
                     margin: EdgeInsets.only(bottom: 10, right: 10),
-                    child: Icon(
+                    child: detail != 'Detail Page' ? Container() : Icon(
                       Icons.favorite,
                       color: Colors.red,
                     )),
