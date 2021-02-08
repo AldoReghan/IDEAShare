@@ -35,13 +35,19 @@ buildDrawer(BuildContext context) {
           ],
         ),
       ),
-      ListTile(
-        title: Text(
-          "Buat Ide",
-          style: TextStyle(color: Colors.indigo),
+      GestureDetector(
+        onTap: () => {
+          Navigator.pushNamed(context,'/buatIdea')
+        },
+        child: ListTile(
+          title: Text(
+            "Buat Ide",
+            style: TextStyle(color: Colors.indigo),
+          ),
+          leading: Icon(Icons.lightbulb, color: Colors.indigo),
         ),
-        leading: Icon(Icons.lightbulb, color: Colors.indigo),
       ),
+      
       GestureDetector(
         onTap: () => {
           Navigator.pushNamed(context,'/lihatIdea')

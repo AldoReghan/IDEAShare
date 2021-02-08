@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ideashare/pages/buat_idea.dart';
 import 'package:ideashare/pages/detail_idea.dart';
 import 'package:ideashare/pages/favorit_idea.dart';
 import 'package:ideashare/pages/home.dart';
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/detailIdea':(context)=>DetailIdeaPage(),
         '/favoritIdea':(context)=>FavoritIdeaPage(),
-        '/lihatIdea':(context)=>LihatIdea()
+        '/lihatIdea':(context)=>LihatIdea(),
+        '/buatIdea':(context)=>BuatIdeaPage()
       },
       debugShowCheckedModeBanner: false,
     );
